@@ -48,8 +48,9 @@ struct ContentView: View {
         }
     }
 }
+```
 
-Example with `colorScheme` (optional)
+### Example with `colorScheme` (optional)
 
 ```swift
 import HighlightKit
@@ -72,3 +73,4 @@ struct ContentView: View {
         }
     }
 }
+```
