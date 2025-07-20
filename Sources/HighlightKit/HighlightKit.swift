@@ -16,8 +16,9 @@ public enum HighlightKitAPI {
                 let nsrange = NSRange(code.startIndex..<code.endIndex, in: code)
                 let matches = regex.matches(in: code, options: [], range: nsrange)
                 for match in matches {
-                    if let range = Range(match.range, in: code) {
-                        attributed[range].mergeAttributes(rule.attributes)
+                    if let stringRange = Range(match.range, in: code),
+                       let attributedRange = Range(stringRange, in: attributed) {
+                        attributed[attributedRange].mergeAttributes(rule.attributes)
                     }
                 }
             }
@@ -48,7 +49,7 @@ public enum TokenType: String {
     case function
     case variable
     case constant
-    case operator
+    case `operator`
     case punctuation
     case string
     case number
