@@ -5,20 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "HighlightKit",
-    platforms:  [
-        .iOS(.v18), .macOS(.v15)
+    platforms: [
+        .iOS(.v18),
+        .macOS(.v15)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "HighlightKit",
-            targets: ["HighlightKit"]),
+        .library(name: "HighlightKit", targets: ["HighlightKit"])
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "HighlightKit", path: "Sources/HighlightKit"),
-        //.testTarget(name: "HighlightKitTests", dependencies: ["HighlightKit"])
-        
+        .target(
+            name: "HighlightKit",
+            dependencies: [],
+            path: "Sources/HighlightKit"
+        )
     ]
-)

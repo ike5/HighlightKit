@@ -26,15 +26,6 @@ struct CodeView: View {
         .padding()
     }
 }
-
 #Preview {
-    CodeView(code: """
-    using System;
-
-    class Program {
-        static void Main() {
-            Console.WriteLine("Hello, world!");
-        }
-    }
-    """, language: .swift)
+    CodeView()
 }
